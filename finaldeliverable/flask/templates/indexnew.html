@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+
+    <title>Chronic Kidney Disease prediction</title>
+    <style>
+        body {
+            background-image: url("bg.jpeg");
+        }
+
+        form {
+            font-family: 'Orbitron';
+            border: 2px black;
+            color:white;
+        }
+        button {
+            height: 40px;
+            width: 100px;
+            margin-top: 50px;
+            font-family: 'Orbitron';
+            background-color: transparent;
+            border-block-color: aqua;
+            color: white;
+            font-size: medium;
+            align-content:center;
+        }
+        
+        .col-25 {
+            float: left;
+            width: 50%;
+            margin-top: 4px;
+        }
+       
+    </style>
+
+</head>
+<body id="top">
+    
+        <center>
+            <form action="{{url_for('predict')}}" method="POST">
+
+                <section>
+                    <div class="row">
+                        <form id="appointment-form" role="form" method="post" action="#">
+
+
+                            <div style="font-family: 'Orbitron';color:white; text-align: center;">
+                                <h1>Chronic Kidney Disease</h1><h3>Machine Learning web app built with Flask</h3>
+                            </div>
+                            <br />
+                            <br />
+                            <div>
+                                <div class="col-25">
+                                    <label for="name">Blood Urea</label>
+                                    <input type="number" class="form-control" id="name" name="blood_urea" placeholder="Blood Urea Level "align="left">
+                                </div><br />
+
+                                <div class="col-25">
+                                    <label for="name">Blood Glucose Random</label>
+                                    <input type="number" class="form-control" id="name1" name="blood_glucose_random" placeholder="Blood Glucose Level Random" align="right">
+                                </div><br />
+
+                                <div class="col-25">
+                                    <label for="select">Select Anemia</label>
+                                    <select name="Anemia">
+                                        <option value="yes"> yes</option>
+                                        <option value="no">no </option>
+                                    </select>
+                                </div><br />
+
+                                <div class="col-25">
+                                    <label for="select">Select Coronary Artery Disease</label>
+                                    <select name="coronary_artery_disease">
+                                        <option value="yes"> yes</option>
+                                        <option value="no">no </option>
+                                    </select>
+                                </div><br />
+
+                                <div class="col-25">
+                                    <label for="select">Select Pus Cell</label>
+                                    <select name="pus_cell">
+                                        <option value="yes"> yes</option>
+                                        <option value="no">no </option>
+                                    </select>
+                                </div><br />
+
+                                <div class="col-25">
+                                    <label for="select">Select Red Blood Cell</label>
+                                    <select name="red_blood_cell">
+                                        <option value="yes"> yes</option>
+                                        <option value="no">no </option>
+                                    </select>
+                                </div><br />
+
+                                <div class="col-25">
+                                    <label for="select">Select Diabetics Mellitus</label>
+                                    <select name="diabetics_mellitus">
+                                        <option value="yes"> yes</option>
+                                        <option value="no">no </option>
+                                    </select>
+                                </div><br />
+
+                                <div class="col-25">
+                                    <label for="select">Select Pedal Edema</label>
+                                    <select name="pedal_edema">
+                                        <option value="yes"> yes</option>
+                                        <option value="no">no </option>
+                                    </select>
+                                </div><br />
+                                    <button type="submit" class="form-control" id="cf-submit" name="submit">predict</button>
+
+                                <br />
+                            </div>
+                        </form>
+
+                    </div>
+                </section>
+        </center>
+    
+  </body>
+ </html>
