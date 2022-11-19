@@ -1,38 +1,74 @@
 <html lang="en">
 <head>
 
-     <title>Chronic Kidney Disease prediction</title>
+    <title>Chronic Kidney Disease prediction</title>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    
+    
+    <style>
+        body {
+            background-image: linear-gradient(to right bottom, #01eff9, #28adcc, #3c708e, #303a4b, #0d0d0d);
+        }
 
-         <!-- <link rel="stylesheet" href="css/tooplate-style.css">-->
+
+        
+        button {
+            height: 80px;
+            width: 160px;
+            margin-top: 50px;
+            font-family: 'Orbitron';
+            background-color: transparent;
+            border-block-color: aqua;
+            color: white;
+            font-size: medium;
+            align-content:center;
+        }
+        button:hover {
+            background-color: #00FFFF;
+            color: black;
+        }
+    </style>
 
 </head>
-<body>
-     <form action="{{url_for('prediction')}}" method="POST">
-     <!--<img src='C:\Users\kgaru\Desktop\ibm_chronic_kidney_disease\app_ibm\templates\images\slider5.jpeg' width="400" height="200" alt="Italian Trulli">-->
+<body >
+    <center>
+        <form action="{{url_for('prediction')}}" method="POST">
+            <!--<img src='C:\Users\kgaru\Desktop\ibm_chronic_kidney_disease\app_ibm\templates\images\slider5.jpeg' width="400" height="200" alt="Italian Trulli">-->
 
-    <section id="home">
-	  
-          <div class="container">
-               <div class="row">
-                         <div class="owl-carousel owl-theme">
-                              <div class="item item-first">
-                                   <div class="caption">
-                                        <div style="background-color:pink;text-align: center;">
-                                   <h1>Chronic Kidney Disease</h1><h3>Machine Learning web app built with Flask</h3>
-                              </div>
-                              <div class="col-md-12 col-sm-12">
-                                        <button type="submit" class="form-control" id="cf-submit" name="submit">prediction</button>
-					                    <!--<img id="test" src="images\slider5.jpeg" width="1400" height="650" alt="No image" />-->
+            <section id="home">
 
-                                   </div>
-                              </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="owl-carousel owl-theme">
+                            <div class="item item-first">
+                                <div class="caption">
+                                    <div style="color:white;text-align: center;font-family: 'Orbitron';">
+                                        <h1>Chronic Kidney Disease</h1><h2>Machine Learning web app built with Flask</h2><br />
+                                        <h3>If You Want to Check Your Kidney Disease..</h3>
+                                        <h3>CLick The Button..!</h3>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12">
+                                        <button type="submit" class="form-control" id="cf-submit" name="submit">Click Here</button>
+                                        <!--<img id="test" src="images\slider5.jpeg" width="1400" height="650" alt="No image" />-->
 
-                                   </div>
-                              </div>
+                                    </div>
+                                    <div style="color:white;text-align: center;font-family: 'Orbitron';">
+                                        <h3>Developed By,</h3>
+                                        <h4>T.Selvaraj</h4>
+                                        <h5>J.Sridhar</h5>
+                                        <h6>S.Madhan sundar</h6>
+                                        <h6>A.Vel Murugan</h6><br />
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-               </div>
-          </div>
-</section>
+                    </div>
+                </div>
+                </div>
+            </section>
+    </center>
 
-    </body>
+</body>
 </html>
